@@ -22,13 +22,11 @@ public class LoginTest extends BaseTest {
 	}
 	
 	@Test(dataProvider="validLoginData", dataProviderClass = DataProviders.class)
-	public void validLoginTest(String email, String pwd) {
-		ExtentManager.logStep("Navigating to login menu");
-		homePage.goToLogin();
+	public void validLoginTest(String user, String pwd) {
 		ExtentManager.logStep("Login with valid credentials");
-		loginPage.login(email, pwd);
+		loginPage.login(user, pwd);
 		ExtentManager.logStep("Verifying login status");
-		Assert.assertTrue(homePage.getURL().contains("account"),"Login failed");
+		Assert.assertTrue(homePage.getURL().contains("inventory"),"Login failed");
 		ExtentManager.logStep("Validation success");
 	}
 

@@ -14,13 +14,13 @@ public class LoginPage {
 	}
 	
 	//Locators
-	private By mail = By.id("input-email");
-	private By pass = By.xpath("input-password");
-	private By loginBtn = By.xpath("//button[normalize-space()='Login']");
+	private By user = By.id("user-name");
+	private By pass = By.id("password");
+	private By loginBtn = By.xpath("//input[@id='login-button']");
 	
 	//Actions
-	public void login(String email, String pwd) {
-		keywords.enterText(mail, email);
+	public void login(String username, String pwd) {
+		keywords.enterText(user, username);
 		keywords.enterText(pass, pwd);
 		keywords.click(loginBtn);
 	}

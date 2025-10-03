@@ -18,6 +18,7 @@ public class TestPage {
 	private By resultTxt = By.id("demo");
 	private By drag = By.xpath("//p[normalize-space()='Drag me to my target']");
 	private By drop = By.xpath("//div[@id='droppable']");
+	private By name = By.id("name");
 	
 	//Actions
 	public Boolean verifyAcceptAlert() {
@@ -38,6 +39,7 @@ public class TestPage {
 	}
 
 	public Boolean verifyUrl(String url) {
+		keywords.enterText(name, "This is a sample text");
 		return keywords.getCurrentURL().contentEquals(url);
 	}
 	

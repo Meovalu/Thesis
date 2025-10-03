@@ -24,14 +24,12 @@ public class KeywordsTest extends BaseTest {
 		ExtentManager.logStep("Verify complete");
 	}
 	
-	@Test
 	public void denyAlertTest() {
 		ExtentManager.logStep("Verifying denying alert");
 		Assert.assertTrue(testPage.verifyCancelAlert(), "Cannot deny aleart");
 		ExtentManager.logStep("Verify complete");
 	}
 	
-	@Test
 	public void alertMessageTest() {
 		ExtentManager.logStep("Verifying alert message");
 		Assert.assertTrue(testPage.verifyAlertMsg(), "Alert message not match");
@@ -45,7 +43,6 @@ public class KeywordsTest extends BaseTest {
 		ExtentManager.logStep("Verify complete");
 	}
 	
-	@Test
 	public void dndTest() {
 		ExtentManager.logStep("Verifying dnd");
 		Assert.assertTrue(testPage.verifyDnD(), "Dnd didn't work");
