@@ -16,7 +16,7 @@ jobs:
                java-version: '21'
                cache: maven
          -  name: Run test with Maven
-            run: mvn clean test -DsuiteXmlFile=testng.xml --file pom.xml
+            run: mvn clean test --file pom.xml
          -  name: Upload Extent Report
             if: always()
             uses: actions/upload-artifact@v4
