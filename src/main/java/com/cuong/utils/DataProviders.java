@@ -14,7 +14,7 @@ public class DataProviders {
 		return getSheetData("validLoginData");
 	}
 	
-	@DataProvider(name="inValidLoginData")
+	@DataProvider(name="invalidLoginData")
 	public static Object[][] inValidLoginData(){
 		return getSheetData("inValidLoginData");
 	}

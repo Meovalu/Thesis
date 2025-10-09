@@ -64,7 +64,8 @@ public class ExtentManager {
 			e.printStackTrace();
 		}
 		
-		//EmailSender.sendEmail(extentReport.toURI());
+		EmailSender.sendEmail(extentReport.toURI());
+		
 	}
 	
 	//Get Current Thread's test

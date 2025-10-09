@@ -7,11 +7,13 @@ import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.ImageHtmlEmail;
 import org.apache.commons.mail.resolver.DataSourceUrlResolver;
 
+
 public class EmailSender {
 
     public static void sendEmail(URI reportPath) {
 
     	try {
+    		LogUtils.info("Start sending email");
     		ImageHtmlEmail email = new ImageHtmlEmail();
     		String path = reportPath.toString();
     		path = path.replace("\\", "/");
@@ -27,8 +29,9 @@ public class EmailSender {
     		email.addTo("oanh14f@gmail.com"); 
     		email.attach(url, "Test report", "Please check report..."); 
     		email.send(); // send the email 
+    		LogUtils.info("Email sent");
     	} catch(Exception e) { 
-    		e.printStackTrace(); 
+    		LogUtils.error(e);
     	}
     }
 
